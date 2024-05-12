@@ -22,8 +22,8 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
 # Training the Logistic Regression model on the Training set
-from sklearn.tree import DecisionTreeClassifier
-classifier = DecisionTreeClassifier()
+from sklearn.linear_model import LogisticRegression
+classifier = LogisticRegression()
 classifier.fit(X_train, y_train)
 
 print('Accuracy of Train : ',classifier.score(X_train, y_train))
